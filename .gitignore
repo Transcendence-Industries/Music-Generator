@@ -1,0 +1,8 @@
+__pycache__/
+cache/
+data/
+midi_in/
+midi_out/
+models/
+
+.DS_Store
