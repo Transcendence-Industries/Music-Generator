@@ -14,9 +14,9 @@
 
 ## Introduction
 
-- This model is trained with existing MIDI files of a specific genre.
+- This model is trained on existing MIDI files of a specific genre.
 - Afterward it can be used to generate new note sequences for a given input sequence.
-- Only tested with pure piano MIDI samples.
+- So far only tested with pure piano MIDI samples.
 
 ## Features
 
@@ -48,7 +48,8 @@
 - Create the empty directories *cache*, *data*, *midi_in*, *midi_out*.
 - Gather MIDI files of the desired genre and put them in the *midi_in* directory (each genre in its separate
   sub-directory).
-- Run the ML-Flow server with `mlflow server --host 127.0.0.1 --port 8080 --backend-store-uri <PATH>` for logging the
+- Run the ML-Flow server
+  with `mlflow server --host 127.0.0.1 --port 8080 --no-serve-artifacts --backend-store-uri <PATH>` for logging the
   training process.
 - If no logging is needed, disable it when creating a model instance at `model = MusicGen_Model(logging=False)`.
 
